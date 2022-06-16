@@ -5,16 +5,6 @@ class XLRequire {
     this.instance = axios.create(config)
     this.interceptors = config.interceptors
 
-    // 每个实例对象都有的拦截
-    this.instance.interceptors.request.use(
-      (res) => {},
-      (err) => {}
-    )
-    this.instance.interceptors.response.use(
-      (res) => {},
-      (err) => {}
-    )
-
     // 单个实例的拦截
     this.instance.interceptors.request.use(
       this.interceptors?.requestInterceptor,
@@ -23,6 +13,24 @@ class XLRequire {
     this.instance.interceptors.response.use(
       this.interceptors?.responseInterceptor,
       this.interceptors?.responseInterceptorCatch
+    )
+
+    // 每个实例对象都有的拦截
+    this.instance.interceptors.request.use(
+      (res) => {
+        return res
+      },
+      (err) => {
+        return err
+      }
+    )
+    this.instance.interceptors.response.use(
+      (res) => {
+        return res
+      },
+      (err) => {
+        return err
+      }
     )
   }
 
