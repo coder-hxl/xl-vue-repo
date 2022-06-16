@@ -1,8 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
+  <router-link to="login">登录</router-link>
+  <router-link to="main">主页</router-link>
+  <router-view></router-view>
+
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>

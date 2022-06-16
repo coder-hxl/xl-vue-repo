@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import xlRequire from './service'
 
-createApp(App).mount('#app')
+import App from './App.vue'
+import router from '@/router'
+
+createApp(App).use(router).mount('#app')
+
+xlRequire.get().then((res) => {
+  console.log(res.data)
+})
