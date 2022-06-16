@@ -3,12 +3,16 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <router-link to="login">登录</router-link>
-  <router-link to="main">主页</router-link>
-  <router-view></router-view>
+  <div class="app">
+    <div>
+      <router-link to="login">登录</router-link>
+      <router-link to="main">主页</router-link>
+      <router-view></router-view>
+    </div>
 
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="hxl help you create Vue 3 + Vite project" />
+  </div>
 </template>
 
 <style>
