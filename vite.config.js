@@ -14,4 +14,7 @@ export default defineConfig({
       { find: 'components', replacement: pathResolve('src/components') },
     ],
   },
+  server: {
+    open: true,
+  },
 })
