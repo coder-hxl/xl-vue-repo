@@ -11,7 +11,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
     </div>
 
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="hxl help you create Vue 3 + Vite project" />
+    <HelloWorld msg="coderhxl help you create Vue 3 + Vite project" />
   </div>
 </template>
 
